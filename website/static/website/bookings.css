@@ -1,0 +1,65 @@
+body,html{
+    text-align: start;
+}
+.engagement{
+    width: 600px;
+    position: absolute;
+    top: 90%;
+    left: 800px;
+}
+.bookingform{
+    width: 500px;
+    position: relative;
+    left: 20%;
+    padding: 0px 10px 10px 10px;
+    margin: 20px;
+    border-radius: 0px 0px 6px 6px;
+}
+.search_rates{
+    display: none;
+}
+.bookingform input{
+    margin: 0px;
+    border: 0px;
+    border: 2px solid black;
+    border-radius: 6px;
+    display: block;
+    padding: 5px 25px 5px 5px;
+    font-size: large;
+    background-color: rgb(223, 246, 253);
+}
+.bookingform textarea{
+    margin: 0px;
+    border: 0px;
+    border: 2px solid black;
+    border-radius: 6px;
+    display: block;
+    padding: 5px 25px 5px 5px;
+    font-size: large;
+    width: 50%;
+    background-color: rgb(223, 246, 253);
+}
+.bookingform select{
+    border: 2px solid black;
+    border-radius: 6px;
+    display: block;
+    padding: 5px 15px 5px 5px;
+    font-size: 15px;
+    background-color: rgb(223, 246, 253);
+}
+@media screen and (max-width: 920px) {
+    html, body{
+
+    }
+    .engagement{
+        display: none;
+    }
+}
+@media screen and (max-width: 430px) {
+    html, body{
+        overflow-x: hidden;
+    }
+    .bookingform{
+        left: 0px;
+    }
+}

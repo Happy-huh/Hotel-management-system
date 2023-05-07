@@ -1,0 +1,62 @@
+{% extends 'website/base.html' %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'website/bookings.css' %}">
+{% endblock %}
+{% block banner %}<img id="banner" src="{% static 'website/img/hotel3.png' %}" alt="cst banner">{% endblock %}
+{% block body %}
+<img class="engagement" src="{% static 'website/img/about.png' %}" alt="">
+<div class="booking_form">
+
+    <form action="{% url 'bookings' %}" method="post" class="bookingform">
+        {% if message %}
+        <h2 style="color: white; background-color: rgb(250, 131, 131); padding: 1em;">error occured while booking please check your inputs again</h2>
+        {% elif success_message %}
+        <h2 style="color: white; background-color: rgb(65, 250, 65); padding: 1em;">'success' reservation booked</h2>
+        {% endif %}
+        {% csrf_token %}
+        <label for="id_fullname">Fullname:</label>          
+        <input type="text" name="fullname" maxlength="300" required="" id="id_fullname">      
+        
+        <label for="id_room">Room:</label>  
+        <select name="room" required="" id="id_room">
+            <option value="" selected="">---------</option>
+            <option value="1">classic room</option>
+            <option value="2">Executive</option>
+            <option value="3">classic suit</option>
+            <option value="4">King Sized</option>
+            <option value="5">Queen Sized</option>
+        </select>
+
+        <label for="id_check_in">Check in:</label>
+        <input type="datetime-local" name="check_in" id="id_check_in"> 
+
+        <label for="id_check_out">Check out:</label>
+        <input type="datetime-local" name="check_out" id="id_check_out">
+
+        <label for="id_children">Children:</label>
+        <select name="children" id="id_children">
+            <option value="unknown">Unknown</option>
+            <option value="true">Yes</option>
+            <option value="false" selected="">No</option>
+        </select>
+
+        <label for="id_number_of_people">Number of people:</label>
+        <input type="number" name="number_of_people" id="id_number_of_people">
+
+        <label for="id_number_of_children">Number of children:</label>
+        <input type="number" name="number_of_children" id="id_number_of_children">
+
+        <label for="id_extra_request">Extra request:</label>
+        <textarea name="extra_request" cols="40" rows="10" id="id_extra_request"></textarea><br>
+
+        <input type="submit">
+    </form>
+
+    <!-- <form action="" class="bookingform">
+        {% csrf_token %}
+        <input type="datetime-local">
+        {{form}}
+    </form> -->
+</div>
+{% endblock %}

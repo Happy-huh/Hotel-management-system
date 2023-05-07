@@ -1,0 +1,196 @@
+.post_container{
+    text-align: center;
+}
+.post_container a{
+    text-decoration: none;
+    color: black;
+}
+.post_container div{
+    display: block;
+    background-color: greenyellow;
+    margin: 12px;
+    position: relative;
+    left: 25%;
+    width: 650px;
+    border-radius: 12px;
+    height: auto;
+    padding-bottom: 5px;
+}
+.post_container div:hover{
+    background-color: green;
+}
+.post_container div h2{
+    padding-top: 10px;
+    border: 0px;
+}
+/* .post_container div h2::after{
+    content: '...';
+} */
+.post_container div p{
+    display: inline-block;
+    position: relative;
+    /* top: -60px; */
+    left: 10px;
+    max-width: 400px;
+    height: 100px;
+    overflow: hidden;
+}
+.post_container div a{
+    text-decoration: none;
+    color: green;
+    font-size: 20px;
+}
+.post_container div img{
+    width: 200px;
+    border-radius: 12px;
+}
+.category_container{
+    background-color: rgb(204, 202, 202);
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+}
+/* .category_container::-webkit-scrollbar{
+    display: none;
+} */
+.category_container div{
+    display: inline-block;
+    margin: 50px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+.category_container div a{
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+}
+.category_container div a:hover{
+    text-decoration: underline;
+}
+.search_rates{
+    display: none;
+}
+.Simg{
+    width: 400px;
+}
+.Sdiv{
+    text-align: center;
+}
+.Sdiv p{
+    text-align: start;
+    width: 80%;
+    padding: 2em;
+}
+@media screen and (max-width: 920px) {
+    html, body{
+        /* overflow-x: hidden; */
+    }
+    .post_container{
+        text-align: center;
+        margin: 10px;
+    }
+    .post_container div{
+        padding: 0px 0px 0px 20px;
+        text-align: start;
+        margin: 10px;
+        position: relative;
+        left: 0px;
+        width: 90%;
+        height: 250px;
+        overflow: hidden;
+    }
+    .post_container div h2{
+        height: 25px;
+        /* max-height: 25px; */
+        overflow: hidden;
+    }
+    .Sdiv h3{
+        padding: 24px;
+    }
+}
+@media screen and (max-width: 450px) {
+    html, body{
+        /* overflow-x: hidden; */
+    }
+    .post_container{
+        text-align: center;
+        margin: 10px;
+    }
+    .post_container div{
+        text-align: start;
+        margin: 10px;
+        position: relative;
+        left: 10px;
+        width: 90%;
+        height: 150px;
+        overflow: hidden;
+    }
+    .post_container div h2{
+        font-size: 18px;
+        position: static;
+        display: inline-block;
+        width: 50%;
+        height: 40%;
+        /* overflow: hidden; */
+        margin: 10px;
+    }
+    /* .post_container div h2::after{
+        content: '...';
+    } */
+    .post_container div p{
+        display: none;
+    }
+    .post_container div a{
+        text-decoration: none;
+        color: green;
+        padding: 0px 0px 20px 20px;
+        font-size: 20px;
+    }
+    .post_container div img{
+        position: absolute;
+        border-radius: 0px;
+        left: 210px;
+        top: -0px;
+        width: 150px;
+        height: 100%;
+        border-radius: 12px;
+    }
+    .Sdiv img{
+        width: 300px;
+    }
+    .category_container div{
+        margin: 10px 30px;
+    }
+    .category_container div a{
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 320px) {
+    html, body{
+        /* overflow-x: hidden; */
+    }
+    .post_container div{
+        position: relative;
+        left: 0px;
+        width: 90%;
+    }
+    .post_container div img{
+        position: absolute;
+        border-radius: 0px;
+        left: 150px;
+        top: -0px;
+        width: 150px;
+        height: 100%;
+        border-radius: 12px;
+    }
+    .post_container div h2{
+        font-size: 18px;
+        position: static;
+        display: inline-block;
+        width: 40%;
+        height: 55%;
+        /* overflow: hidden; */
+        margin: 10px;
+    }
+}

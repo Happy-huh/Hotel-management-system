@@ -1,0 +1,373 @@
+@import url('https://fonts.googleapis.com/css2?family=poppins:wght@200;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=poppins:wght@200;300;500;200;600;700;800;900;&display=swap');
+
+body{
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    background-color: rgb(233, 255, 200);
+    overflow-x: hidden;
+}
+#banner{
+    position: relative;
+    width: 100%;
+    height: 550px;
+    /* opacity: 0.5; */
+}
+.topsection{
+    position: absolute;
+    margin-bottom: 250px;
+    top: -20px;
+}
+.logo{
+    position: relative;
+    left: 600px;
+}
+.logo:hover{
+    top: -5px;
+}
+.welcome{
+    position: relative; 
+    left: 450px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 2px;
+    font-size: 2em;
+}
+#nav_btn{
+    margin: 0px;
+    color: white;
+    background-color:rgb(170, 255, 0);
+    padding: 2%;
+    position: relative;
+    left: 1200px;
+    top: -170px;
+    font-size: 30px;
+    text-decoration: none;
+}
+#main_nav{
+    background-color: greenyellow;
+    padding: 100px;
+    height: 1000px;
+    overflow-y: scroll;
+    position: fixed;
+    top: -75px;
+    z-index: 2;
+    display: none;
+}
+#main_nav div li{
+    position: relative;
+    left: -100px;
+    list-style-type: none;
+    color: green;
+    padding: 1.5em;
+}
+#main_nav div li:hover{
+    background-color:  rgb(233, 255, 200);
+}
+#main_nav a{
+    color: black;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px dashed green;
+}
+#main_nav .a{
+    color: black;
+    background-color: inherit;
+    border: none;
+    border-bottom: 1px dashed green;
+}
+#main_nav div li a{
+    color: green;
+    font-size: 30px;
+    text-decoration: none;
+    border-bottom: none;
+}
+.main_search{
+    position: relative;
+    top: -100px;
+    padding: 2em;
+}
+.general_search{
+    font-size: large;
+    padding: 0px 50px 0px 5px;
+}
+.general_search_btn{
+    position: relative;
+    left: -40px;
+}
+.search_rates input{
+    font-size: large;
+    padding: 0px 50px 0px 5px;
+    margin: 0px 0px 10px 0px;
+}
+.search_rates{
+    position: relative;
+    background-color: rgb(253, 204, 139);
+    display: inline-block;
+    border-radius: 6px;
+    left: 30%;
+    padding: 1em;
+    margin: 2em;
+    border: solid 2px black;
+}
+.search_rates button{
+    position: relative;
+    left: 30%;
+}
+footer{
+    background-color: greenyellow;
+    padding: 2em;
+    text-align: center;
+}
+footer ul{
+    text-align: start;
+}
+footer li{
+    list-style-type: none;
+}
+footer .legal li{
+    display: inline;
+}
+footer a{
+    text-decoration: none;
+    color: black;
+    padding: 2em;
+}
+footer .highlight{
+    color: green;
+    padding: 1px;
+    font-size: 13px;
+}
+footer img{
+    width: 50px;
+}
+.cont{
+    text-align: end;
+    background-color: greenyellow;
+    border-bottom: 1px solid green;
+    width: 500px;
+    position: absolute;
+    left: 70%;
+}
+.cont div{
+    text-align: start;
+    width: 500px;
+    padding: 6px;
+    position: relative;
+    right: 150px;
+    border-radius: 12px;
+}
+.cont div .head{
+    padding-bottom: 10px;
+    border-bottom: 1px solid green;
+}
+.faq{
+    text-align: start;
+}
+footer a img{
+    width: 30px;
+}
+footer .social_logo:hover{
+    position: relative;
+    top: -10px;
+}
+footer #banner:hover{
+    position: relative;
+    top: -5px;
+}
+.hidden{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 3s;
+}
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+footer #banner{
+    padding: 2em;
+    position:relative;
+    left:600px; 
+    width: 80px; 
+    height: 40px; 
+    display: block;
+}
+.copyright{
+    color: grey;
+}
+@media screen and (max-width: 1030px) {
+    html, body{
+        text-align: center;
+        overflow-x: hidden;
+    }
+    .main_search{
+        display: none;
+    }
+    .logo{
+        position: relative;
+        left: -20px;
+        top: 10px;
+    }
+    .topsection img{
+        position: relative;
+        left: 30px;
+        top: 30px;
+        width: 120px;
+    }
+    .welcome{
+        position: relative;
+        left: 45%;
+        top: 220px;
+        font-size: 30px;
+        padding: 40px;
+    }
+    .search_rates{
+        position: static;
+    }
+    #nav_btn{
+        position: relative;
+        top: 10px;
+        left: 440px;
+        opacity: 1000;
+        /* z-index: 1000; */
+    }
+    #main_nav{
+        position: fixed;
+        width: 250px;
+        max-height: 70%;
+    }
+    #main_nav .get_us_at{
+        position: relative;
+        left: -50%;
+    }
+    footer .cont{
+        position: relative;
+        left: 150px;
+        width: 100%;
+        border-bottom: none;
+    }
+    footer #banner{
+        position: relative;
+        left: 40%;
+    }
+    footer .copyright{
+        position: relative;
+        left: 80px;
+        font-size: 10px;
+    }
+}
+@media screen and (max-width: 430px) {
+    html, body{
+        overflow-x: hidden;
+    }
+    .main_search{
+        display: none;
+    }
+    .logo{
+        position: relative;
+        left: 10px;
+        top: 10px;
+    }
+    .topsection img{
+        position: relative;
+        left: 30px;
+        top: 30px;
+        width: 120px;
+    }
+    .welcome{
+        position: relative;
+        left: 20px;
+        top: 220px;
+        font-size: 18px;
+        padding: 12px;
+    }
+    .search_rates{
+        position: static;
+    }
+    #nav_btn{
+        position: relative;
+        top: 10px;
+        left: 150px;
+        opacity: 1000;
+        /* z-index: 1000; */
+    }
+    #main_nav{
+        position: fixed;
+        width: 60px;
+        max-height: 460px;
+    }
+    #main_nav .get_us_at{
+        position: relative;
+        left: -80px;
+    }
+    #main_nav .get_us_at p{
+        position: relative;
+        left: -100px;        
+    }
+    /* h1{
+        font-size: 18px;
+    }
+    h2{
+        font-size: 12px;
+    } */
+    footer{
+        text-align: start;
+    }
+    footer p{
+        width: 100%;
+    }
+    footer .cont{
+        position: relative;
+        left: 120px;
+        width: 100%;
+        border-bottom: none;
+    }
+    footer ul{
+        position: relative;
+        left: -50px;
+    }
+    footer .cont p{
+        width: 200px;
+    }
+    footer a img{
+        width: 20px;
+    }
+    footer #banner{
+        position: static;
+    }
+    footer .legal li a{
+        display: inline;
+        font-size: 12px;
+        margin: 10px;
+        padding: 0px;
+    }
+    footer .copyright{
+        position: static;
+        font-size: 10px;
+    }
+}
+@media screen and (max-width: 400px) {
+    html, body{
+        overflow-x: hidden;
+    }
+    #nav_btn{
+        position: relative;
+        top: 10px;
+        left: 50px;
+        opacity: 1000;
+        /* z-index: 1000; */
+    }
+    .logo{
+        position: relative;
+        left: 0px;
+        top: 0px;
+        width: 30px;
+    }
+    .welcome{
+        position: relative;
+        left: -1px;
+    }
+}

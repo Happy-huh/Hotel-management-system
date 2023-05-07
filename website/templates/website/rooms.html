@@ -1,0 +1,17 @@
+{% extends 'website/base.html' %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'website/room.css' %}">{% endblock %}
+{% block banner %}<img id="banner" src="{% static 'website/img/hotel2.png' %}" alt="cst banner">{% endblock %}
+{% block body %}
+    <div class="room_container">
+        {% for i in rooms %}
+            <div>
+                <img src="{{i.main_picture.url}}" alt="">
+                <h3>{{i.name}}</h3>
+                <p>{{i.description}}</p>
+                <a href="{% url 'specific_room' i.id %}">view details</a>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

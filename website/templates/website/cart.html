@@ -1,0 +1,32 @@
+{% extends 'website/base.html' %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'website/cart.css' %}">
+{% endblock %}
+{% block banner %}<img id="banner" src="{% static 'website/img/hotel3.png' %}" alt="cst banner">{% endblock %}
+{% block body %}
+    {% for item in reservations %}
+        <div>
+            <a href="{% url 'reservation' item.id %}">
+                <table>
+                    <tr id="table_top">
+                        <div style="flex:2"><th></th></div>
+                        <div style="flex:2"><th>room type</th></div>
+                        <!-- <div id="optional" style="flex:2"><th>price</th></div> -->
+                        <!-- <div id="optional" style="flex:2"><th>check in</th></div> -->
+                        <div style="flex:2"><th>date booked</th></div>
+                        <th>see full details</th>
+                    </tr>
+                    
+                    <tr>
+                        <div style="flex:2"><th><img src="{{item.room.imageURL}}" alt=""></th></div>
+                        <div style="flex:2"><th>{{item.room.name}}</th></div>
+                        <!-- <div id="optional" style="flex:2"><th>${{item.room.price}}</th></div> -->
+                        <!-- <div id="optional" style="flex:2"><th>{{item.check_in}}</th></div> -->
+                        <div style="flex:2"><th>{{item.date_booked}}</th></div>
+                    </tr>
+                </table>
+            </a>
+        </div>
+    {% endfor %}
+{% endblock %}

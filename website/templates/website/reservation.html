@@ -1,0 +1,46 @@
+{% extends 'website/base.html' %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'website/reservation.css' %}">
+{% endblock %}
+{% block banner %}{% endblock %}
+{% block greeting %}{% endblock %}
+{% block body %}
+<div class="reservation">
+    <table>
+        <tr id="table_top">
+            <div style="flex:2"><th><h3>name</h3></th></div>
+            <div style="flex:2"><th><h3>{{reservation.fullname}}</h3></th></div>
+        </tr>
+        <tr id="table_top">
+            <div style="flex:2"><th><h3>room:</h3></th></div>
+            <div style="flex:2"><th><h3>{{reservation.room}}</h3></th></div>
+        </tr>
+        <tr id="table_top">
+            <div style="flex:2"><th><h3>room number:</h3></th></div>
+            <div style="flex:2"><th><h3>{{reservation.roomtac}}</h3></th></div>
+        </tr>
+        <tr id="table_top">
+            <div style="flex:2"><th><h3>check in:</h3></th></div>
+            <div style="flex:2"><th><h3>{{reservation.check_in}}</h3></th></div>
+        </tr>
+        <tr id="table_top">
+            <div style="flex:2"><th><h3>check out:</h3></th></div>
+            <div style="flex:2"><th><h3>{{reservation.check_out}}</h3></th></div>
+        </tr>
+        <tr id="table_top">
+            <div style="flex:2"><th><h3>number of people:</h3></th></div>
+            <div style="flex:2"><th><h3>{{reservation.number_of_people}} people</h3></th></div>
+        </tr>
+        <tr id="table_top">
+            <div style="flex:2"><th><h3>date booked:</h3></th></div>
+            <div style="flex:2"><th><h3>{{reservation.date_booked}}</h3></th></div>
+        </tr>
+        <tr id="table_top">
+            <div style="flex:2"><th><h3>extra request:</h3></th></div>
+            <div style="flex:2"><th><p>{{reservation.extra_request}}</p></th></div>
+        </tr>
+    </table>
+    <a href=""><strong>cancel reservation</strong></a>
+</div>
+{% endblock %}

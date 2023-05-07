@@ -1,0 +1,83 @@
+{% extends 'website/base.html' %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'website/home.css' %}">
+{% endblock %}
+{% block body %}
+<section style="text-align:center;">
+    <section class="hidden">
+        <h1>Award winning hospitality service provider</h1>
+        <h3><strong>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia est harum, maxime nemo ab soluta ipsam deserunt cupiditate aspernatur error quia molestiae omnis nam hic accusantium! Illum nemo laudantium minus.</strong></h2>
+        <h2>Our Rooms</h2>
+        <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident maiores quis officia aperiam minima exercitationem, tenetur in nulla ullam facilis, tempore ad! Perferendis, suscipit sapiente beatae ut consequatur molestiae magni?</h3>
+    </section>
+    <section class="hidden">
+        <div class="rooms">
+            {% for room in rooms %}
+            <section class="hidden">
+                <div class="room">
+                    <img src="{{room.main_picture.url}}" alt="">
+                    <h2>{{room.name}}</h2>
+                    <a href="{% url 'specific_room' room.id %}" style="text-decoration: none; color: rgb(87, 87, 141);"><strong>$ {{room.price}}</strong></a><br><br>
+                    <a href="{% url 'specific_room' room.id %}" style="text-decoration: none; color: green;"><strong>Book Now</strong></a>
+                </div>
+            </section>
+            {% endfor %}
+        </div>
+    </section>
+    <div class="messages">
+        <img src="" alt="">
+        <h2></h2>
+    </div>
+    <div class="contact">
+        <section class="hidden">
+            <div>
+                <p class="head">getting here</p>
+                <h3></h3>
+                <p>282 Jekinway Close, Plakamisi bussiness district, Jos</p>
+                <p><strong>Tel :</strong> 0910128333</p>
+                <p><strong>Email :</strong> psiak@hmail.com</p>
+            </div>
+        </section>
+        
+        <section>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3930.707271930255!2d8.881847014793163!3d9.874907892936983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x105373806f54a991%3A0x19467c6322f0a93!2sCrest%20Hotel!5e0!3m2!1sen!2sng!4v1673010324710!5m2!1sen!2sng" width="1500" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+        
+    </div>
+    <section class="hidden">
+        <h2>What Customers Say About Us</h2>
+    </section>
+    <section class="hidden">
+        <div class="testimonials">
+            <div>
+                <img src="{% static 'website/img/person1.png' %}" alt="">
+                <p><strong>Sharon Flaire</strong></p>
+                <p>Excellent</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam laborum, sapiente quidem quasi praesentium excepturi, ratione perspiciatis obcaecati expedita itaque nulla id velit aut nostrum sequi natus sint voluptatibus saepe.</p>
+            </div>
+            <div>
+                <img src="{% static 'website/img/person2.png' %}" alt="">
+                <p><strong>Thomas Martin</strong></p>
+                <p>Very Good</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam laborum, sapiente quidem quasi praesentium excepturi, ratione perspiciatis obcaecati expedita itaque nulla id velit aut nostrum sequi natus sint voluptatibus saepe.</p>
+        
+            </div>
+            <div>
+                <img src="{% static 'website/img/anonymousperson.png' %}" alt="">
+                <p><strong>Anonymous</strong></p>
+                <p>Excellent</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam laborum, sapiente quidem quasi praesentium excepturi, ratione perspiciatis obcaecati expedita itaque nulla id velit aut nostrum sequi natus sint voluptatibus saepe.</p>
+        
+            </div>
+            <div>
+                <img src="{% static 'website/img/person3.png' %}" alt="">
+                <p><strong>kendra James</strong></p>
+                <p>Excellent</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam laborum, sapiente quidem quasi praesentium excepturi, ratione perspiciatis obcaecati expedita itaque nulla id velit aut nostrum sequi natus sint voluptatibus saepe.</p>
+        
+            </div>
+        </div>
+    </section>
+</section>
+{% endblock %}

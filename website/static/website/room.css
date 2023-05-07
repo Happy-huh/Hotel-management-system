@@ -1,0 +1,96 @@
+.sroom_container{
+    position: relative;
+    top: 100px;
+    text-align: center;
+}
+.room_pic{
+    width: 40%;
+    position: relative;
+    right: 25%;
+    border-radius: 12px;
+}
+.room_container{
+    text-align: center;
+}
+.room_container div{
+    background-color: greenyellow;
+    width: 500px;
+    height: 300px;
+    border: 50px;
+    margin: 20px;
+    padding: 12px;
+    border-radius: 12px;
+    position: relative;
+    left: 28%;
+    overflow: hidden;
+}
+.room_container div img{
+    width: 250px;
+    height: 150px;
+    border-radius: 12px;
+}
+.room_container div p{
+    height: 50px;
+    overflow: hidden;
+}
+.room_container div a{
+    text-decoration: none;
+    color: green;
+}
+.room_container div a:hover{
+    color: white;
+}
+.sroom_container div h3{
+    font-size: 40px;
+}
+.sroom_container div p{
+    padding: 40px;
+}
+.search_rates{
+    display: none;
+}
+footer{
+    position: relative;
+    top: 100px;
+}
+@media screen and (max-width: 920px) {
+    html, body{
+    }
+    .welcome{
+        font-size: 30px;
+    }
+    .room_container{
+        text-align: center;
+        margin-left: 50px;
+    }
+    .room_container div{    
+        position: static;
+        width: 80%;
+    }
+    .room_pic{
+        position: static;
+        width: 500px;
+    }
+}
+@media screen and (max-width: 430px) {
+    html, body{
+    }
+    .room_container{
+        text-align: center;
+    }
+    .room_container div{    
+        position: relative;
+        left: -30px;
+        width: 80%;
+    }
+    #nav_btn{
+        position: relative;
+    }
+    .logo{
+        position: relative;
+    }
+    .room_pic{
+        position: static;
+        width: 300px;
+    }
+}

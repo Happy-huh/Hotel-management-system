@@ -1,0 +1,16 @@
+{% extends 'website/base.html' %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'website/room.css' %}">{% endblock %}
+{% block banner %}{% endblock %}
+{% block greeting %}{% endblock %}
+{% block body %}
+    <div class="sroom_container">
+        <div>
+            <img src="{{room.main_picture.url}}" alt="" class="room_pic">
+            <h3>{{room.name}}</h3>
+            <h2>$ {{room.price}}</h2>
+            <p><strong>{{room.description}}</strong></p>
+        </div>
+    </div>
+{% endblock %}

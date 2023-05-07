@@ -1,0 +1,134 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'website/styles.css' %}">
+    {% block css %}{% endblock %}
+    <title>{% block title %}cst{% endblock %}</title>
+</head>
+<body>
+    {% block banner %}<img id="banner" src="{% static 'website/img/hotel1.png' %}" alt="cst banner">{% endblock %}
+    <section class="topsection">
+        <a href="{% url 'home' %}" class="logo"><img src="{% static 'website/img/logo.png' %}" alt=""></a>
+        <div class="main_search">
+            <form action="">
+                <input class="general_search" type="search" name="general_search" placeholder="search">
+                <input class="general_search_btn" type="submit" value="&#128269;">
+            </form>
+        </div>
+        <a href="#" id="nav_btn">&#9776;</a>
+        {% block greeting %}
+        <section class="hidden">
+            <h1 class="welcome">WELCOME TO CREST !<span class="auto-type" style="color: rgb(67, 238, 67);"></span></h1>
+        </section>
+        {% endblock %}
+            <nav id="main_nav"  style="height: 530px; overflow-x: hidden;">
+                <div>
+                    <div class="get_us_at">
+                        <p>&#9993; contact us 0908896576</p>
+                        <a href="{% url 'cart' %}">Reservations</a>
+                        {% if user.is_authenticated %}
+                        <form action="{% url 'logout' %}" method="post">
+                            {% csrf_token %}
+                            <input class="a" type="submit" value="logout">
+                        </form>
+                        {% else %}
+                            <a href="{% url 'signup' %}">signup/signin</a>
+                        {% endif %}
+                    </div>
+                    <ul>
+                        <li><a href="{% url 'rooms' %}">rooms</a></li>
+                        <li><a href="{% url 'gallery' %}">facilities</a></li>
+                        <li><a href="{% url 'bookings' %}">bookings</a></li>
+                        <li><a href="{% url 'gallery' %}">gallery</a></li>
+                        <li><a href="{% url 'blog' %}">blog</a></li>
+                        <li><a href="#">faq</a></li>
+                    </ul>
+                </div>
+            </nav>
+    </section>
+    <script>
+        var btn = document.querySelector('#nav_btn')
+        var nav = document.getElementById('main_nav')
+
+        btn.addEventListener('click',(function(){
+            if(nav.style.display === 'block'){
+                nav.style.display = 'none'
+            }else{
+                nav.style.display = 'block'
+            }
+        }))
+    </script>
+    <!-- <section class="hidden"> -->
+        <div class="search_rates">
+            <form action="">
+                <label for="id_check_in"><strong>Check in:</strong></label>
+                <input type="datetime-local" id="id_check_in" name="check_in" placeholder="check in"><br>
+                <label for="id_check_out"><strong>Check out:</strong></label>
+                <input type="datetime-local" name="check_in" id="id_check_out" placeholder="check in"><br>
+                <button type="submit">search rates</button>
+            </form>
+        </div>
+    <!-- </section> -->
+    {% block body %}{% endblock %}
+    <footer>
+        <div class="cont">
+            <div>
+                <p class="head">getting here :</p>
+                <h3></h3>
+                <p>282 Jekinway Close, Plakamisi bussiness district, Jos</p>
+                <p><strong>Tel :</strong> 0910128333</p>
+                <p><strong>Email :</strong> psiak@hmail.com</p>
+            </div>
+        </div>
+        <div class="faq">
+            <h2>frequently asked questions</h2>
+            <ul>
+                <a href="#"><li>what are some of the best attraction close by?</li></a>
+                <a href="#"><li>what are the ammenitties available?</li></a>
+                <a href="#"><li>what airports are close by?</li></a>
+                <a href="#"><li>are there available parking space</li></a>
+                <a href="" style="position: relative; left: 40px; font-size:small;" class="highlight"><strong> ALL FAQS</strong></a>
+            </ul>
+        </div>
+        <p style="position: relative;left: -20px;width: 80%;">follow us on our <a href="" class="highlight">socila media platforms</a> for all the latest news.</p>  
+        <a class="social_logo" href="#"><img src="{% static 'website/img/facebook (1).png' %}" alt=""></a>  <a class="social_logo" href="#"><img src="{% static 'website/img/linkedin (1).png' %}" alt=""></a>  <a class="social_logo" href="#"><img src="{% static 'website/img/twitter (1).png' %}" alt=""></a>  <a class="social_logo" href="#"><img src="{% static 'website/img/instagram (1).png' %}" alt=""></a>    
+        <a href="{% url 'home' %}"><img id="banner" src="{% static 'website/img/logo.png' %}" alt=""></a>
+        <ul class="legal">
+            <li><a href="">News</a></li>
+            <li><a href="">Business Development</a></li>
+            <li><a href="">Contact Us</a></li>
+            <li><a href="">Best Rate Guarantee</a></li>
+            <li><a href="">Privacy Policy</a></li>
+            <li><a href="">Terms Of Use</a></li>
+        </ul>
+        <p class="copyright" style="position: relative; bottom: -20px; font-size: 12px;">copyright @ 2023-2024 all rights reserved</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <!-- <script>
+        var typed = new Typed('.auto-type',{
+            strings: ["WELCOME TO SLURZ!", "WE MEET THE BEST STANDARDS", "WE ARE ALWAYS HAPPY TO HAVE YOU"],
+            typespeed: 200,
+            backspeed: 200,
+            loop: true
+        })
+    </script> -->
+    <script>
+        const observer = new IntersectionObserver((entries)=> {
+            entries.forEach((entry)=>{
+                if (entry.isIntersecting){
+                    entry.target.classList.add('show')
+                } else{
+                    entry.target.classList.remove('show')
+                }
+            })
+        })
+
+        const hiddenElements = document.querySelectorAll('.hidden')
+        hiddenElements.forEach((el) => observer.observe(el))
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+{% extends 'website/base.html' %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'website/blog.css' %}">{% endblock %}
+{% block banner %}<img id="banner" src="{% static 'website/img/hotel3.png' %}" alt="cst banner">{% endblock %}
+{% block body %}
+    <div class="category_container">
+        <div>
+            <a href="{% url 'blog' %}"><strong>All</strong></a>
+        </div>
+        {% for i in categories %}
+            <div>
+                <a href="{% url 'blog_category' i.id %}"><strong>{{i.name}}</strong></a>
+            </div>
+        {% endfor %}
+    </div>
+    <div class="post_container">
+        {% for post in posts %}
+        <a href="{% url 'blog_post' post.id %}">
+            <div>
+                <h2><strong>{{post.name}}</strong></h2>
+                <img src="{{post.imageURL}}" alt="">
+                <p>{{post.description}}</p><br>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+{% endblock %}

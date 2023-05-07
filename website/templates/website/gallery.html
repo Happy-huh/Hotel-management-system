@@ -1,0 +1,185 @@
+{% extends 'website/base.html' %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'website/gallery.css' %}">
+{% endblock %}
+{% block body %}
+    <div class="container">
+        <h2>Gallery</h2>
+        <div class="menu">
+            <a href="#" class="btn" data-filter="all">All</a>
+            <a href="#" class="btn" data-filter="Rooms">Rooms</a>
+            <a href="#" class="btn" data-filter="leisure">Health and Relaxation</a>
+            <a href="#" class="btn" data-filter="food">Food and Drinks</a>
+        </div>
+        <div class="box" id="store-items">
+            <section class="hidden">
+                <a href="{% static 'website/img/swimmingpool1.png' %}">
+                <div class="store-item leisure">
+                    <img src="{% static 'website/img/swimmingpool1.png' %}" class="store-img" alt="">
+                </div>
+                </a>
+            </section>
+            <section class="hidden">
+                <a href="{% static 'website/img/room1.png' %}">
+                    <div class="store-item Rooms">
+                        <img src="{% static 'website/img/room1.png' %}" class="store-img" alt="">
+                    </div>
+                </a>
+            </section>
+            <section class="hidden">
+                <a href="{% static 'website/img/room2.png' %}">
+                    <div class="store-item Rooms">
+                        <img src="{% static 'website/img/room2.png' %}" class="store-img" alt="">
+                    </div>
+                </a>
+            </section>
+            <section class="hidden">
+                <a href="{% static 'website/img/room3.png' %}">
+                    <div class="store-item Rooms">
+                        <img src="{% static 'website/img/room3.png' %}" class="store-img" alt="">
+                    </div>
+                </a>
+            </section>
+            <section class="hidden">
+                <a href="{% static 'website/img/swimmingpool2.png' %}">
+                    <div class="store-item leisure">
+                        <img src="{% static 'website/img/swimmingpool2.png' %}" class="store-img" alt="">
+                    </div>
+                </a>
+            </section>
+            <section class="hidden">
+                <a href="{% static 'website/img/bar2.png' %}">
+                    <div class="store-item food">
+                        <img src="{% static 'website/img/bar2.png' %}" class="store-img" alt="">
+                    </div>
+                </a>
+            </section>
+            <section class="hidden">
+                <a href="{% static 'website/img/hgym1.png' %}">
+                    <div class="store-item leisure">
+                        <img src="{% static 'website/img/hgym1.png' %}" class="store-img" alt="">
+                    </div>
+                </a>
+            </section>
+            <section class="hidden">
+                <a href="{% static 'website/img/hgym2.png' %}">
+                    <div class="store-item leisure">
+                        <img src="{% static 'website/img/hgym2.png' %}" class="store-img" alt="">
+                    </div>
+                </a>
+            </section>
+            <section class="hidden">
+                <a href="{% static 'website/img/hgym3.png' %}">
+                    <div class="store-item leisure">
+                        <img src="{% static 'website/img/hgym3.png' %}" class="store-img" alt="">
+                    </div>
+                </a>
+            </section>
+            <section class="hidden">
+                <a href="{% static 'website/img/swimmingpool3.png' %}">
+                    <div class="store-item leisure">
+                        <img src="{% static 'website/img/swimmingpool3.png' %}" class="store-img" alt="">
+                    </div>
+                </a>
+            </section>
+            <section class="hidden">
+                <a href="{% static 'website/img/swimmingpool4.png' %}">
+                    <div class="store-item leisure">
+                        <img src="{% static 'website/img/swimmingpool4.png' %}" class="store-img" alt="">
+                    </div>
+                </a>
+            </section>
+            <section class="hidden">
+                <a href="{% static 'website/img/dinning3.png' %}">
+                    <div class="store-item food">
+                        <img src="{% static 'website/img/dinning3.png' %}" class="store-img" alt="">
+                    </div>
+                </a>
+            </section>
+            <section class="hidden">
+                <a href="{% static 'website/img/room4.png' %}">
+                    <div class="store-item Rooms">
+                        <img src="{% static 'website/img/room4.png' %}" class="store-img" alt="">
+                    </div>
+                </a>
+            </section>
+            <section class="hidden">
+                <a href="{% static 'website/img/hotel1.png' %}">
+                    <div class="store-item">
+                        <img src="{% static 'website/img/hotel1.png' %}" class="store-img" alt="">
+                    </div>
+                </a>
+            </section>
+            <section class="hidden">
+                <a href="{% static 'website/img/hgym5.png' %}">
+                    <div class="store-item leisure">
+                        <img src="{% static 'website/img/hgym5.png' %}" class="store-img" alt="">
+                    </div>
+                </a>
+            </section>
+            <section class="hidden">
+                <a href="{% static 'website/img/dinning1.png' %}">
+                    <div class="store-item food">
+                        <img src="{% static 'website/img/dinning1.png' %}" class="store-img" alt="">
+                    </div>
+                </a>
+            </section>
+            <section class="hidden">
+                <a href="{% static 'website/img/dinning2.png' %}">
+                    <div class="store-item food">
+                        <img src="{% static 'website/img/dinning2.png' %}" class="store-img" alt="">
+                    </div>
+                </a>
+            </section>
+            <section class="hidden">
+                <a href="{% static 'website/img/swimmingpool5.png' %}">
+                    <div class="store-item leisure">
+                        <img src="{% static 'website/img/swimmingpool5.png' %}" class="store-img" alt="">
+                    </div>
+                </a>
+            </section>
+            <section class="hidden">
+                <a href="{% static 'website/img/bar1.png' %}">
+                    <div class="store-item food">
+                        <img src="{% static 'website/img/bar1.png' %}" class="store-img" alt="">
+                    </div>
+                </a>
+            </section>
+            <section class="hidden">
+                <a href="{% static 'website/img/room5.png' %}">
+                    <div class="store-item Rooms">
+                        <img src="{% static 'website/img/room5.png' %}" class="store-img" alt="">
+                    </div>
+                </a>
+            </section>
+        </div>
+    </div>
+    <script>
+        (function(){
+            var buttons = document.querySelectorAll(".btn")
+            var storeImages = document.querySelectorAll(".store-item")
+
+            buttons.forEach((button) => {
+                button.addEventListener('click', (e)=>{
+                    e.preventDefault()
+                    var filter = e.target.dataset.filter
+                    storeImages.forEach((item)=>{
+                        if(filter === 'all'){
+                            item.style.display = 'block'
+                        }
+                        else{
+                            if(item.classList.contains(filter)){
+                                item.style.display = 'block'
+                            }
+                            else{
+                                item.style.display = 'none'
+                            }
+                        }
+                    })
+                })
+            })
+
+        })()
+    </script>
+{% endblock %}

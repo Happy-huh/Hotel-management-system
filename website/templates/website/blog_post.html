@@ -1,0 +1,12 @@
+{% extends 'website/base.html' %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'website/blog.css' %}">{% endblock %}
+{% block banner %}<img id="banner" src="{% static 'website/img/hotel3.png' %}" alt="cst banner">{% endblock %}
+{% block body %}
+<div class="Sdiv">
+    <img class="Simg" src="{{post.imageURL}}" alt="">
+    <h1 class="Sh1">{{post.name}}</h1>
+    <h3 class="Sp">{{post.description}}</h3>
+</div>
+{% endblock %}
